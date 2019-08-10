@@ -2,18 +2,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Category List</title>
+    <title>Shopping List</title>
 </head>
 <body>
 <a href="/blackCat">Strona Główna</a><br>
-<a href="/categories/add">Dodaj Kategorie</a>
+<a href="/shoppings/add">Shoppings</a>
 
-<c:forEach items="${categories}" var="Category">
+<c:forEach items="${shoppings}" var="Shopping">
     <div>
-        <a href="/Category/${Category.id}/Delate">Usuń Kategorie</a>
-        ${Category.name}
-        ${Category.id}
-
+        <a href="/Shopping/${Shopping.id}/Delate">Usuń Shopping</a>
+            ${Shopping.name}
+            ${Shopping.id}
     </div>
 </c:forEach>
 </body>

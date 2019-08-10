@@ -63,7 +63,8 @@ public class CategoryController {
     }
 
     @GetMapping("/categories/add")
-    String addCategoryForm() {
+    String addCategoryForm(Model model) {
+        model.addAttribute("categories", categoryReposytory.findAll());
         return "category/add";
     }
 

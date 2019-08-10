@@ -12,8 +12,9 @@ public class Auction {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private  Long id;
     private String name;
-    //private Category category;
-    private String promowana;
+    @OneToOne
+    private Category category;
+    private boolean promowana;
     private double kwotaMin;
     private double kwotaObecna;
     private LocalDateTime dataWystawienia;
@@ -22,6 +23,28 @@ public class Auction {
 
     @Column(length = 4000)
     private String opis;
+
+    public Auction(String name, Category category, boolean promowana, double kwotaMin, double kwotaObecna, LocalDateTime dataWystawienia, LocalDateTime dataZakończenia, Long ilośćOdwiedzin, String opis) {
+
+        this.name = name;
+        this.promowana = promowana;
+        this.kwotaMin = kwotaMin;
+        this.kwotaObecna = kwotaObecna;
+        this.dataWystawienia = dataWystawienia;
+        this.dataZakończenia = dataZakończenia;
+        this.ilośćOdwiedzin = ilośćOdwiedzin;
+        this.opis = opis;
+    }
+
+    public Auction() { }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
 
     public Long getId() {
         return id;
@@ -38,11 +61,12 @@ public class Auction {
     public void setName(String name) {
         this.name = name;
     }
-    public String getPromowana() {
+
+    public boolean isPromowana() {
         return promowana;
     }
 
-    public void setPromowana(String promowana) {
+    public void setPromowana(boolean promowana) {
         this.promowana = promowana;
     }
 

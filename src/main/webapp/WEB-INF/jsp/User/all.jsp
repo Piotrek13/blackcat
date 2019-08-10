@@ -2,19 +2,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Category List</title>
+    <title>User List</title>
 </head>
 <body>
 <a href="/blackCat">Strona Główna</a><br>
-<a href="/categories/add">Dodaj Kategorie</a>
+<a href="/users/add">Dodaj Usera</a>
 
-<c:forEach items="${categories}" var="Category">
+<c:forEach items="${users}" var="User">
     <div>
-        <a href="/Category/${Category.id}/Delate">Usuń Kategorie</a>
-        ${Category.name}
-        ${Category.id}
-
+        <a href="/User/${User.id}/Delate">Usuń User</a>
+            ${User.name}
+            ${User.id}
     </div>
 </c:forEach>
+
 </body>
 </html>

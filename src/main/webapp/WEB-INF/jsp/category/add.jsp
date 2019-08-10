@@ -14,6 +14,11 @@
         <input type="submit">
     </form>
 </div>
+<div>
+    <c:forEach var="category" items="${categories}">
+        ${category.name}<br/>
+    </c:forEach>
+</div>
 
 </body>
 </html>

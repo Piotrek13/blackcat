@@ -18,9 +18,15 @@
 <body>
 <h1>BlackCat</h1>
 <a href="/categories/add">Dodaj Kategorie</a>
+<p><a href="/auctions/add">Dodaj Aukcje</a></p>
+<p><a href="/biddings/add">Licytacje</a></p>
+<p><a href="/shoppings/add">Shoppings</a></p>
+<p><a href="/transactionRating/add">transactionRating</a></p>
 <div style="overflow: hidden;">
     <div style="float: right">
         <form>
+
+            <p><a href="/users/add">Dodaj Usera</a></p>
             <label>Login:</label><br/>
             <input type="text" ><br/>
             <label>Password:</label><br/>
@@ -39,11 +45,11 @@
 
 <div>
     <form>
-        <label>Categories:</label><br/>
+        <label>Kategorie:</label><br/>
         <input type="text" ><br/>
-        <label>Auctions:</label><br/>
+        <label>Aukcje:</label><br/>
         <input type="text" ><br/>
-        <label>Bidding:</label><br/>
+        <label>Licytacje:</label><br/>
         <input type="text" ><br/>
         <label>Shopping:</label><br/>
         <input type="text" ><br/>
