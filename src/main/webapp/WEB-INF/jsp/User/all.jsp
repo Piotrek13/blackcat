@@ -11,7 +11,7 @@
 <c:forEach items="${users}" var="User">
     <div>
         <a href="/User/${User.id}/Delate">Usuń User</a>
-            ${User.name}
+            ${User.login}
             ${User.id}
     </div>
 </c:forEach>

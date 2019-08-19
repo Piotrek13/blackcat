@@ -16,12 +16,7 @@
         <input type="password" name="password" /><br/>
         <label>Adres</label>
         <input type="text" name="adres" /><br/>
-        <label>DataZałożeniaKonta</label>
-        <input type="date" name="dataZałożeniaKonta" /><br/>
-        <label>StatusKonta</label>
-        <input type="text" name="statusKonta" /><br/>
-        <label>Type</label>
-        <input type="text" name="type" /><br/>
+        <input type="submit">
 
     </form>
 </div>

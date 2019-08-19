@@ -11,21 +11,21 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private  Long id;
-    private String login;
-    private String password;
+    private  String login;
+    private  String password;
     private String adres;
     private LocalDateTime dataZałożeniaKonta;
-    private String statusKonta;
-    private String type;
+    private boolean statusKonta;
+    private String role;
 
     public User(String login, String password, String adres, LocalDateTime dataZałożeniaKonta,
-                String statusKonta, String type) {
+                boolean statusKonta, String role) {
         this.login = login;
         this.password = password;
         this.adres = adres;
         this.dataZałożeniaKonta = dataZałożeniaKonta;
         this.statusKonta = statusKonta;
-        this.type = type;
+        this.role = role;
     }
 
 
@@ -39,7 +39,7 @@ public class User {
         this.id = id;
     }
 
-    public String getLogin() {
+    public  String getLogin() {
         return login;
     }
 
@@ -47,7 +47,7 @@ public class User {
         this.login = login;
     }
 
-    public String getPassword() {
+    public  String getPassword() {
         return password;
     }
 
@@ -71,19 +71,19 @@ public class User {
         this.dataZałożeniaKonta = dataZałożeniaKonta;
     }
 
-    public String getStatusKonta() {
+    public boolean getStatusKonta() {
         return statusKonta;
     }
 
-    public void setStatusKonta(String statusKonta) {
+    public void setStatusKonta(boolean statusKonta) {
         this.statusKonta = statusKonta;
     }
 
-    public String getType() {
-        return type;
+    public String getRole() {
+        return role;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setRole(String role) {
+        this.role = role;
     }
 }

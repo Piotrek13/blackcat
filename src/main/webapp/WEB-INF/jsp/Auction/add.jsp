@@ -12,7 +12,7 @@
 <div>
     <form method="post" action="/auctions">
         <label>Nazwa Auction</label>
-        <input type="text" name="name" /><br/>
+        <input type="text" name="name"/><br/>
         <label>Kategoria</label>
         <select name="categoryId">
             <c:forEach var="category" items="${categories}">
@@ -22,18 +22,19 @@
         <label>Promowana</label>
         <input type="checkbox" name="promowane"/><br/>
         <label>KwotaMin</label>
-        <input type="text" name="kwotaMin" /><br/>
+        <input type="text" name="kwotaMin"/><br/>
         <label>DataWystawienia</label>
-        <input type="date" name="dataWystawienia" /><br/>
+        <input type="date" name="dataWystawienia"/><br/>
         <label>DataZakończenia</label>
-        <input type="date" name="dataZakończenia" /><br/>
-        <label>IlośćOdwiedzin</label>
-        <input type="number" name="ilośćOwiedzin" /><br/>
+        <input type="date" name="dataZakończenia"/><br/>
         <label> Opis</label>
         <textarea name="opis" rows="6" cols="36"></textarea><br/>
         <input type="submit">
     </form>
-</div>
 
+</div>
+<div>
+    <img src="https://i.pinimg.com/originals/49/52/67/4952670d3e78c749096d6d1f2536b324.jpg">
+</div>
 </body>
 </html>

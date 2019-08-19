@@ -8,6 +8,7 @@
 <a href="/blackCat">Strona Główna</a><br>
 <a href="/categories/add">Dodaj Kategorie</a>
 
+
 <c:forEach items="${categories}" var="Category">
     <div>
         <a href="/Category/${Category.id}/Delate">Usuń Kategorie</a>
@@ -16,5 +17,6 @@
 
     </div>
 </c:forEach>
+<p><a href="/categories">Kategorie</a><br/></p>
 </body>
 </html>

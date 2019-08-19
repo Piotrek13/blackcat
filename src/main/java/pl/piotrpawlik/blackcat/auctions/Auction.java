@@ -1,9 +1,10 @@
 package pl.piotrpawlik.blackcat.auctions;
 
 import pl.piotrpawlik.blackcat.categories.Category;
+import pl.piotrpawlik.blackcat.users.User;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 public class Auction {
@@ -17,14 +18,20 @@ public class Auction {
     private boolean promowana;
     private double kwotaMin;
     private double kwotaObecna;
-    private LocalDateTime dataWystawienia;
-    private LocalDateTime dataZakończenia;
+    private LocalDate dataWystawienia;
+    private LocalDate dataZakończenia;
     private Long ilośćOdwiedzin;
+    @OneToOne()
+    private User maxBidder;
 
     @Column(length = 4000)
     private String opis;
 
-    public Auction(String name, Category category, boolean promowana, double kwotaMin, double kwotaObecna, LocalDateTime dataWystawienia, LocalDateTime dataZakończenia, Long ilośćOdwiedzin, String opis) {
+
+
+    public Auction(String name, Category category, boolean promowana, double kwotaMin,
+                   double kwotaObecna, LocalDate dataWystawienia, LocalDate dataZakończenia,
+                   Long ilośćOdwiedzin, String opis) {
 
         this.name = name;
         this.promowana = promowana;
@@ -86,19 +93,19 @@ public class Auction {
         this.kwotaObecna = kwotaObecna;
     }
 
-    public LocalDateTime getDataWystawienia() {
+    public LocalDate getDataWystawienia() {
         return dataWystawienia;
     }
 
-    public void setDataWystawienia(LocalDateTime dataWystawienia) {
+    public void setDataWystawienia(LocalDate dataWystawienia) {
         this.dataWystawienia = dataWystawienia;
     }
 
-    public LocalDateTime getDataZakończenia() {
+    public LocalDate getDataZakończenia() {
         return dataZakończenia;
     }
 
-    public void setDataZakończenia(LocalDateTime dataZakończenia) {
+    public void setDataZakończenia(LocalDate dataZakończenia) {
         this.dataZakończenia = dataZakończenia;
     }
 
@@ -117,4 +124,8 @@ public class Auction {
     public void setOpis(String opis) {
         this.opis = opis;
     }
+
+    public User getMaxBidder() { return maxBidder; }
+
+    public void setMaxBidder(User maxBidder) { this.maxBidder = maxBidder; }
 }
